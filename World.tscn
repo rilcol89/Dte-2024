@@ -1,0 +1,45 @@
+[gd_scene load_steps=9 format=3 uid="uid://0u7l66of2gfv"]
+
+[ext_resource type="PackedScene" uid="uid://b3f8o8r5p8tcx" path="res://character_body_3d.tscn" id="1_lg4qv"]
+[ext_resource type="Texture2D" uid="uid://ktioxpmk4v6n" path="res://KayKit_Skeletons_1.0_FREE/characters/gltf/wwwwwwwwwwww.jpg" id="1_rxvy1"]
+[ext_resource type="PackedScene" uid="uid://dx65ejtp1n67s" path="res://KayKit_Skeletons_1.0_FREE/characters/gltf/Skeleton_Minion.glb" id="3_jsp71"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_68f0j"]
+panorama = ExtResource("1_rxvy1")
+
+[sub_resource type="Sky" id="Sky_1mc67"]
+sky_material = SubResource("PanoramaSkyMaterial_68f0j")
+
+[sub_resource type="Environment" id="Environment_bonbk"]
+background_mode = 2
+sky = SubResource("Sky_1mc67")
+tonemap_mode = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_nlbdv"]
+size = Vector3(57.04, 0.78, 35.2)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_c6cws"]
+data = PackedVector3Array(-28.52, 0.39, 17.6, 28.52, 0.39, 17.6, -28.52, -0.39, 17.6, 28.52, 0.39, 17.6, 28.52, -0.39, 17.6, -28.52, -0.39, 17.6, 28.52, 0.39, -17.6, -28.52, 0.39, -17.6, 28.52, -0.39, -17.6, -28.52, 0.39, -17.6, -28.52, -0.39, -17.6, 28.52, -0.39, -17.6, 28.52, 0.39, 17.6, 28.52, 0.39, -17.6, 28.52, -0.39, 17.6, 28.52, 0.39, -17.6, 28.52, -0.39, -17.6, 28.52, -0.39, 17.6, -28.52, 0.39, -17.6, -28.52, 0.39, 17.6, -28.52, -0.39, -17.6, -28.52, 0.39, 17.6, -28.52, -0.39, 17.6, -28.52, -0.39, -17.6, 28.52, 0.39, 17.6, -28.52, 0.39, 17.6, 28.52, 0.39, -17.6, -28.52, 0.39, 17.6, -28.52, 0.39, -17.6, 28.52, 0.39, -17.6, -28.52, -0.39, 17.6, 28.52, -0.39, 17.6, -28.52, -0.39, -17.6, 28.52, -0.39, 17.6, 28.52, -0.39, -17.6, -28.52, -0.39, -17.6)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_bonbk")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("1_lg4qv")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.43701, 0)
+mesh = SubResource("BoxMesh_nlbdv")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_c6cws")
+
+[node name="Skeleton_Minion" parent="." instance=ExtResource("3_jsp71")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.7105, 8.82438, -3.85966)
