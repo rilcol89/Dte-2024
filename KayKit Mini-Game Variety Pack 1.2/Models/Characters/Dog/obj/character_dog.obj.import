@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c1ooyk87abptb"
+path="res://.godot/imported/character_dog.obj-43cafe5b3d557c9ddba84ffe243a5e0c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/character_dog.obj-43cafe5b3d557c9ddba84ffe243a5e0c.mesh"]
+
+source_file="res://KayKit Mini-Game Variety Pack 1.2/Models/Characters/Dog/obj/character_dog.obj"
+dest_files=["res://.godot/imported/character_dog.obj-43cafe5b3d557c9ddba84ffe243a5e0c.mesh", "res://.godot/imported/character_dog.obj-43cafe5b3d557c9ddba84ffe243a5e0c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

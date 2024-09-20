@@ -1,0 +1,11 @@
+Model Information:
+* title:	STUNT RAMP
+* source:	https://sketchfab.com/3d-models/stunt-ramp-b7e99b37f1cf450e8efa5c297335d4aa
+* author:	PropShop (https://sketchfab.com/syedabbas0815)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "STUNT RAMP" (https://sketchfab.com/3d-models/stunt-ramp-b7e99b37f1cf450e8efa5c297335d4aa) by PropShop (https://sketchfab.com/syedabbas0815) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

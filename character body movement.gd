@@ -15,6 +15,7 @@ func _ready():
 
 
 func _physics_process(delta):
+	print(is_on_floor())
 	# Player movement
 	var input_direction = Vector3()
 	input_direction.x = Input.get_action_strength("right") - Input.get_action_strength("left")

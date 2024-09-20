@@ -3,16 +3,14 @@
 [ext_resource type="Script" path="res://character body movement.gd" id="1_br02s"]
 [ext_resource type="PackedScene" uid="uid://b3ewmpmkjrfy0" path="res://KayKit_Skeletons_1.0_FREE/characters/gltf/Skeleton_Rogue.glb" id="2_g8ydt"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_80v0p"]
-radius = 1.2
-height = 3.0
+[sub_resource type="BoxShape3D" id="BoxShape3D_kp00j"]
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 script = ExtResource("1_br02s")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.996539, -0.0152682, 0.081707, -0.00183756, 0.978698, 0.205296, -0.083101, -0.204736, 0.975283, 0.301043, 1.23012, 0.736352)
-shape = SubResource("CapsuleShape3D_80v0p")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_kp00j")
 
 [node name="Skeleton_Rogue" parent="." instance=ExtResource("2_g8ydt")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
