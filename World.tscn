@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://0u7l66of2gfv"]
+[gd_scene load_steps=39 format=3 uid="uid://0u7l66of2gfv"]
 
 [ext_resource type="PackedScene" uid="uid://b3f8o8r5p8tcx" path="res://character_body_3d.tscn" id="1_lg4qv"]
 [ext_resource type="Texture2D" uid="uid://ktioxpmk4v6n" path="res://KayKit_Skeletons_1.0_FREE/characters/gltf/wwwwwwwwwwww.jpg" id="1_rxvy1"]
@@ -29,6 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://d1xhckqt45ay8" path="res://3DObbyModels/ball_teamRed-col.glb" id="27_j45qy"]
 [ext_resource type="PackedScene" uid="uid://drbg1ukucss4y" path="res://3DObbyModels/scene.gltf" id="28_7g4th"]
 [ext_resource type="PackedScene" uid="uid://ctk42a4ur678d" path="res://KayKit Mini-Game Variety Pack 1.2/Models/Characters/Duck/gltf/character_duck.gltf" id="29_3cgtc"]
+[ext_resource type="AudioStream" uid="uid://cdulgu4ardu1l" path="res://Alex Poatan Pereira Walkout Song_ Itsári - Sepultura (Arena Effect).mp3" id="29_qcjib"]
 [ext_resource type="PackedScene" uid="uid://bfa6618k11ghu" path="res://KayKit Mini-Game Variety Pack 1.2/Models/Characters/Dog/dae/character_dog.dae" id="30_4i340"]
 [ext_resource type="PackedScene" uid="uid://dds8r1jjqeumw" path="res://KayKit Mini-Game Variety Pack 1.2/Models/Characters/Bear/gltf/character_bear.gltf" id="31_nm357"]
 [ext_resource type="PackedScene" uid="uid://brrb438v7kfcx" path="res://KayKit Mini-Game Variety Pack 1.2/Models/Characters/Bear/dae/character_bear.dae" id="32_kd2vn"]
@@ -81,7 +82,7 @@ transform = Transform3D(0.471934, -0.0126574, 0.69697, -0.182044, 0.759565, 0.01
 transform = Transform3D(-17.4115, 0.0237114, 0.0228895, -0.0830299, 0.031747, -3.76509, -0.547757, -0.758522, -0.156868, 32.7011, 8.7401, 53.1812)
 
 [node name="tileLarge_teamRed-col11" parent="." instance=ExtResource("4_1peai")]
-transform = Transform3D(-1.51035, -0.753309, -0.155399, -0.0860859, 0.0316237, -3.76366, 17.998, -0.0630649, -0.0310425, 88.2946, 8.7401, 0.884018)
+transform = Transform3D(-1.51035, -0.753309, -0.155399, -0.0860859, 0.0316237, -3.76366, 17.998, -0.0630649, -0.0310425, 88.2946, 9.49845, 0.884018)
 
 [node name="tileLarge_teamRed-col13" parent="." instance=ExtResource("4_1peai")]
 transform = Transform3D(-0.749084, -0.786999, -0.126187, -0.0486404, 0.0268067, -3.78125, 8.93073, -0.0658656, -0.0311784, 33.6418, 9.03106, 27.4612)
@@ -604,3 +605,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.7769, 2.69072, -28.9883)
 
 [node name="character_bear" parent="." instance=ExtResource("32_kd2vn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.4208, 5.79996, -25.7611)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("29_qcjib")
+autoplay = true
