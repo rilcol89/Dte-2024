@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://qa34br54asri"]
+[gd_scene load_steps=40 format=3 uid="uid://qa34br54asri"]
 
 [ext_resource type="Texture2D" uid="uid://ktioxpmk4v6n" path="res://KayKit_Skeletons_1.0_FREE/characters/gltf/wwwwwwwwwwww.jpg" id="1_62ykt"]
 [ext_resource type="PackedScene" uid="uid://dx65ejtp1n67s" path="res://KayKit_Skeletons_1.0_FREE/characters/gltf/Skeleton_Minion.glb" id="3_f14qi"]
@@ -27,7 +27,6 @@
 [ext_resource type="PackedScene" uid="uid://bj6jddvyp0htr" path="res://3DObbyModels/barrierLadder-col.glb" id="26_4xxbv"]
 [ext_resource type="PackedScene" uid="uid://blcob21mdfpxx" path="res://3DObbyModels/barrierFloor-col.glb" id="27_yr347"]
 [ext_resource type="PackedScene" uid="uid://d1xhckqt45ay8" path="res://3DObbyModels/ball_teamRed-col.glb" id="28_sj5w7"]
-[ext_resource type="Script" path="res://checkpointEnter.gd" id="29_hr0qi"]
 [ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="33_vwbl8"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_68f0j"]
@@ -66,10 +65,6 @@ size = Vector3(57.04, 0.78, 35.2)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ecmeh"]
 data = PackedVector3Array(-28.52, 0.39, 17.6, 28.52, 0.39, 17.6, -28.52, -0.39, 17.6, 28.52, 0.39, 17.6, 28.52, -0.39, 17.6, -28.52, -0.39, 17.6, 28.52, 0.39, -17.6, -28.52, 0.39, -17.6, 28.52, -0.39, -17.6, -28.52, 0.39, -17.6, -28.52, -0.39, -17.6, 28.52, -0.39, -17.6, 28.52, 0.39, 17.6, 28.52, 0.39, -17.6, 28.52, -0.39, 17.6, 28.52, 0.39, -17.6, 28.52, -0.39, -17.6, 28.52, -0.39, 17.6, -28.52, 0.39, -17.6, -28.52, 0.39, 17.6, -28.52, -0.39, -17.6, -28.52, 0.39, 17.6, -28.52, -0.39, 17.6, -28.52, -0.39, -17.6, 28.52, 0.39, 17.6, -28.52, 0.39, 17.6, 28.52, 0.39, -17.6, -28.52, 0.39, 17.6, -28.52, 0.39, -17.6, 28.52, 0.39, -17.6, -28.52, -0.39, 17.6, 28.52, -0.39, 17.6, -28.52, -0.39, -17.6, 28.52, -0.39, 17.6, 28.52, -0.39, -17.6, -28.52, -0.39, -17.6)
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_7fvue"]
-height = 2.935
-radius = 4.26
 
 [node name="Node3D" type="Node3D"]
 
@@ -554,29 +549,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0953, 4.52133, 34.9659)
 [node name="ball_teamRed-col7" parent="Node3D" instance=ExtResource("28_sj5w7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7118, 5.95986, 34.5469)
 
-[node name="level 3" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.8927, 30.9005, -23.7602)
-script = ExtResource("29_hr0qi")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="level 3"]
-shape = SubResource("CylinderShape3D_7fvue")
-
-[node name="level 1" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 115.474, 22.0457, 66.3075)
-script = ExtResource("29_hr0qi")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="level 1"]
-shape = SubResource("CylinderShape3D_7fvue")
-
-[node name="level 2" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.7814, 22.1168, 64.4927)
-script = ExtResource("29_hr0qi")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="level 2"]
-shape = SubResource("CylinderShape3D_7fvue")
-
 [connection signal="pressed" from="VBoxContainer/Stargamebutton" to="VBoxContainer" method="_on_stargamebutton_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="VBoxContainer" method="_on_quit_button_pressed"]
-[connection signal="body_entered" from="level 3" to="level 3" method="_on_body_entered"]
-[connection signal="body_entered" from="level 1" to="level 1" method="_on_body_entered"]
-[connection signal="body_entered" from="level 2" to="level 2" method="_on_body_entered"]

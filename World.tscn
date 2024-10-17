@@ -616,7 +616,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0953, 4.52133, 34.9659)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7118, 5.95986, 34.5469)
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_lg4qv")]
-transform = Transform3D(0.0349867, 0, 0.999388, 0, 1, 0, -0.999388, 0, 0.0349867, 30.4941, 21.095, -23.7195)
+transform = Transform3D(0.0349867, 0, 0.999388, 0, 1, 0, -0.999388, 0, 0.0349867, 79.9754, -1.0625, -24.9124)
 
 [node name="character_duck2" parent="." instance=ExtResource("29_3cgtc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.5073, 4.62116, -28.3895)
